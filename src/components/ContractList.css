@@ -1,0 +1,60 @@
+.contract-list {
+    margin-top: 1.5rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .contract-list table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .contract-list th,
+  .contract-list td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .contract-list th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #495057;
+  }
+  
+  .contract-list tr:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .status {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .status-draft {
+    background-color: #e9ecef;
+    color: #495057;
+  }
+  
+  .status-finalized {
+    background-color: #d3f9d8;
+    color: #2b8a3e;
+  }
+  
+  .no-contracts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: #868e96;
+    font-size: 1.1rem;
+  }
+  
