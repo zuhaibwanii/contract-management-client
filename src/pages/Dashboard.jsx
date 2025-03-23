@@ -36,7 +36,6 @@ const Dashboard = () => {
     socket.on('contract:updated', (updatedContract) => {
       toast.info(`Contract updated: ${updatedContract.contract_id}`);
 
-      // Update the list without refetching from server
       setContracts(prevContracts =>
         prevContracts.map(contract =>
           contract.contract_id === updatedContract.contract_id ? updatedContract : contract
@@ -46,8 +45,6 @@ const Dashboard = () => {
 
     socket.on('contract:deleted', ({ contract_id }) => {
       toast.info(`Contract deleted`);
-
-      // Remove the deleted contract from the list
       setContracts(prevContracts =>  prevContracts.filter(contract => contract.contract_id !== contract_id) );
     });
 

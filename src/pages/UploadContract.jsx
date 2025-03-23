@@ -34,13 +34,10 @@ const UploadContract = () => {
         const content = event.target.result;
         setFileContent(content);
 
-        // Try to parse if it's JSON
         try {
           JSON.parse(content);
-          // If valid JSON, set content as is
           setFormData(prev => ({ ...prev, content }));
         } catch {
-          // If not valid JSON, set as string
           setFormData(prev => ({ ...prev, content }));
         }
       } catch (err) {
@@ -57,10 +54,8 @@ const UploadContract = () => {
     try {
       setLoading(true);
 
-      // Process the content field
       let processedContent;
 
-      // If it's a string that could be JSON, try to parse it
       if (typeof formData.content === 'string') {
         try {
           processedContent = JSON.parse(formData.content);

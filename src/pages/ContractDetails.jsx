@@ -34,7 +34,7 @@ const ContractDetails = () => {
     try {
       setLoading(true);
       const response = await getContract(id);
-      console.log('fetchContract response', response);
+      // console.log('fetchContract response', response);
       if (response.status === 200) {
         let data = response.data;
         setContract(data);
@@ -100,7 +100,6 @@ const ContractDetails = () => {
   };
 
   if (loading) return <Loader isLoading={loading} message="Loading contract details..." />;
-  // if (loading) return <div className="loading">Loading contract details...</div>;
   if (error) return <div className="error">{error}</div>;
   if (!contract) return <div className="error">Contract not found</div>;
 
